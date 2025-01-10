@@ -6,10 +6,17 @@ import {
 } from "react-router-dom";
 import './index.css'
 import Main from './assets/Components/Main';
+import Home from './assets/Components/Home';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    children:[
+      {
+        path: "/",
+        element: <Home></Home>,
+      }
+    ]
   },
 ]);
 
