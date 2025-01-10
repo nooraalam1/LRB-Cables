@@ -6,4 +6,4 @@
     5) Npm swiper
     6) Firebase
     7) Npm helmet
-    8)Npm parallax
+    8) Npm parallax
