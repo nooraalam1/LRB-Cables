@@ -1,4 +1,5 @@
 import Banner from './Banner';
+import FromOurMenu from './FromOurMenu';
 import Swiperr from './Swiperr';
 
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Swiperr></Swiperr>
+            <FromOurMenu></FromOurMenu>
 
         </div>
     );

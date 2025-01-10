@@ -11,10 +11,10 @@ const Swiperr = () => {
             <h2 className="text-2xl text-center mb-4">Order Online</h2>
             <div className='w-3/5 mx-auto'>  
             <Swiper
-        slidesPerView={3}
-       Autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
+        slidesPerView={4}
+        autoplay={{
+            delay: 2000, // 2 seconds interval
+            disableOnInteraction: false, // Continue autoplay after interaction
         }}
         spaceBetween={40}
         centeredSlides={true}
