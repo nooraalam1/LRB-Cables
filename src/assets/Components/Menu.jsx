@@ -3,7 +3,7 @@ import useMenu from './CustomHooks/useMenu';
 
 const Menu = () => {
     const [menu] =useMenu();
-    const filtered = menu.filter(item=>item.category==='popular')
+    const filtered = menu.filter(item=>item.category==='offered')
     const dessert = menu.filter(item=>item.category==='dessert')
     const pizza = menu.filter(item=>item.category==='pizza')
     const salad = menu.filter(item=>item.category==='salad')
@@ -13,8 +13,11 @@ const Menu = () => {
             <Helmet>
                 <title>Noor | Menu</title>
             </Helmet>
-            <h1 className="text-center text-3xl font-semibold">Our Menu</h1>
-            <h1 className="text-center text-2xl font-semibold text-blue-400">Today's Offer</h1>
+            <h1 className="text-center text-3xl font-semibold my-4">--Our Menu--</h1>
+            <div className="flex justify-center items-center">
+
+            <h1 className="lg:w-4/5 text-center text-2xl font-semibold text-yellow-300 bg-gray-500 mb-2">Today's Offer</h1>
+            </div>
             <div className="flex justify-center items-center">
                 <div className="md:grid grid-cols-2 gap-5 w-[80vw] ">
                   {
@@ -34,7 +37,10 @@ const Menu = () => {
                 </div>
                 </div>
                 <div className="">
-                <h1 className="text-center text-2xl font-semibold text-blue-400">Dessert</h1>
+                    <div className="flex justify-center items-center">
+
+                <h1 className="lg:w-4/5 text-center text-2xl font-semibold text-yellow-300 bg-gray-500 my-2">Dessert</h1>
+                    </div>
             <div className="flex justify-center items-center">
                 <div className="md:grid grid-cols-2 gap-5 w-[80vw] ">
                   {
@@ -55,7 +61,10 @@ const Menu = () => {
                 </div>
                 </div>
                 <div>
-                <h1 className="text-center text-2xl font-semibold text-blue-400">Pizza</h1>
+                    <div className="flex justify-center items-center">
+
+                <h1 className="lg:w-4/5 text-center text-2xl font-semibold text-yellow-300 bg-gray-500 my-2">Pizza</h1>
+                    </div>
             <div className="flex justify-center items-center">
                 <div className="md:grid grid-cols-2 gap-5 w-[80vw] ">
                   {
@@ -76,7 +85,10 @@ const Menu = () => {
                 </div>
                 </div>
                 <div>
-                <h1 className="text-center text-2xl font-semibold text-blue-400">Salad</h1>
+                    <div className="flex justify-center items-center">
+
+                <h1 className="lg:w-4/5 text-center text-2xl font-semibold text-yellow-300 bg-gray-500 my-2">Salad</h1>
+                    </div>
             <div className="flex justify-center items-center">
                 <div className="md:grid grid-cols-2 gap-5 w-[80vw] ">
                   {
@@ -97,7 +109,10 @@ const Menu = () => {
                 </div>
                 </div>
                 <div>
-                <h1 className="text-center text-2xl font-semibold text-blue-400">Soup</h1>
+                    <div className=' flex justify-center items-center'>
+
+                <h1 className=" lg:w-4/5 text-center text-2xl font-semibold text-yellow-300 bg-gray-500 my-2">Soup</h1>
+                    </div>
             <div className="flex justify-center items-center">
                 <div className="md:grid grid-cols-2 gap-5 w-[80vw] ">
                   {
