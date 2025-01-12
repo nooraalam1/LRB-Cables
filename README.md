@@ -3,7 +3,6 @@
     2) React Router
     3) Taildwind CSS
     4) Daisy UI
-    5) Npm swiper
+    5) Multiple npm packages
     6) Firebase
-    7) Npm helmet
-    8) Npm parallax
+    7) Custom Hooks
