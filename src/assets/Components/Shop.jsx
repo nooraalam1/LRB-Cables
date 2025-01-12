@@ -14,7 +14,7 @@ const Shop = () => {
             <Helmet>
                 <title>Noor | Shop</title>
             </Helmet>
-            <h1 className="text-center text-3xl font-semibold my-4">--Our Menu--</h1>
+            <h1 className="text-center text-3xl font-semibold my-4">--Our Shop--</h1>
             
             {/* name of each tab group should be unique */}
             <div role="tablist" className="tabs tabs-border ">
