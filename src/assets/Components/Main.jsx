@@ -5,12 +5,14 @@ import Navbar from './Navbar';
 const Main = () => {
     const location = useLocation();
     const x = location.pathname.includes('login')
-    // const y = location.pathname.includes('register')
+    const y = location.pathname.includes('registration')
+
     return (
         <div>
              <Navbar />
             <Outlet />
-           {x ||  <Footer />}
+           {x || y  ||  <Footer />}
+           
             
         </div>
     );

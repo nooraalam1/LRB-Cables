@@ -12,6 +12,8 @@ import Menu from './assets/Components/Menu';
 import Shop from './assets/Components/Shop';
 import Contact from './assets/Components/Contact';
 import Login from './assets/Components/Login';
+import Registration from './assets/Components/Registration';
+import AuthProvider from './assets/Components/Firebase/AuthProvider';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,14 +39,20 @@ const router = createBrowserRouter([
         path:'/login',
         element:<Login></Login>
       },
+      {
+        path:'/registration',
+        element:<Registration></Registration>
+      },
     ]
   },
 ]);
 
 createRoot(document.getElementById('root')).render(
-  <HelmetProvider>
+ <AuthProvider>
+   <HelmetProvider>
     <StrictMode>
    <RouterProvider router={router} />
   </StrictMode>
   </HelmetProvider>
+ </AuthProvider>
 )
