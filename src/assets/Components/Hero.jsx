@@ -13,7 +13,7 @@ const Hero = () => {
           <div className="max-w-md text-white">
             <h1 className="mb-4 text-xl font-semibold">--Check It Out--</h1>
             <h1 className="mb-4 text-2xl ">From Our Menu</h1>
-            <img src="../../../public/Img/banner.jpg" alt="" srcset="" />
+            <img src="../../../public/Img/banner.jpg" alt=""  />
             <button className="btn btn-secondary">Order Now</button>
           </div>
         </div>

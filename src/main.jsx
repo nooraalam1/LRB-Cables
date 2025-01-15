@@ -48,11 +48,12 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById('root')).render(
- <AuthProvider>
-   <HelmetProvider>
+   <AuthProvider>
+     <HelmetProvider>
     <StrictMode>
    <RouterProvider router={router} />
   </StrictMode>
   </HelmetProvider>
- </AuthProvider>
+   </AuthProvider>
+ 
 )

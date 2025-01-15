@@ -1,7 +1,9 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
+import { AuthContext } from './Firebase/AuthProvider';
 const Login = () => {
+    const {loginUser} = useContext(AuthContext)
     function handleLogin(e) {
         e.preventDefault();
         const email = e.target.email.value
@@ -14,7 +16,16 @@ const Login = () => {
         else {
             alert('Captcha Does Not Match');
         }
-        console.log(email, password,captcha)
+       
+
+        loginUser(email,password)
+        .then((userCredential) => {
+           alert("Success")
+          })
+          .catch((error) => {
+            alert("error")
+
+          });
     }
 
     useEffect(() => {
