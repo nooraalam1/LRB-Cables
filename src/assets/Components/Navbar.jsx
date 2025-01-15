@@ -1,8 +1,13 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "./Firebase/AuthProvider";
 
 const Navbar = () => {
 
-
+const {user,logoutUser} = useContext(AuthContext)
+function handlelogout(){
+  logoutUser()
+}
     return (
         <nav>
             <div className="navbar ">
@@ -28,9 +33,19 @@ const Navbar = () => {
         <li><NavLink to='/'>Home</NavLink> </li>
         <li><NavLink to='/menu'>Menu</NavLink> </li>
         <li><NavLink to='/shop'>Shop</NavLink> </li>
-        <li><NavLink to='/login'>Login</NavLink> </li>
-        <li><NavLink to='/registration'>Registration</NavLink> </li>
         <li><NavLink to='/contact'>Contact</NavLink> </li>
+        <div>
+          {
+            user?<li><button onClick={handlelogout}>Logout</button> </li>: <div>
+              <div className="flex justify-center items-center">
+              <li><NavLink to='/login'>Login</NavLink> </li>
+              <li><NavLink to='/registration'>Registration</NavLink> </li>
+              </div>
+            </div>
+          }
+          
+        </div>
+       
         
       </ul>
     </div>
@@ -41,13 +56,22 @@ const Navbar = () => {
     <li><NavLink to='/'>Home</NavLink> </li>
     <li><NavLink to='/menu'>Menu</NavLink> </li>
     <li><NavLink to='/shop'>Shop</NavLink> </li>
-    <li><NavLink to='/login'>Login</NavLink> </li>
-    <li><NavLink to='/registration'>Registration</NavLink> </li>
     <li><NavLink to='/contact'>Contact</NavLink> </li>
+    <div>
+    {
+            user?<li><button onClick={handlelogout}>Logout</button> </li>: <div>
+              <div className="md:flex justify-center items-center">
+              <li><NavLink to='/login'>Login</NavLink> </li>
+              <li><NavLink to='/registration'>Registration</NavLink> </li>
+              </div>
+            </div>
+          }
+    </div>
     </ul>
   </div>
   <div className="navbar-end">
-<button>Mode</button>
+<button>{user && user.email}</button>
+
   </div>
 </div>
         </nav>

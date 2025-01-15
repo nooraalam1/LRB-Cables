@@ -15,6 +15,7 @@ const Login = () => {
    
         else {
             alert('Captcha Does Not Match');
+            return ;
         }
        
 
