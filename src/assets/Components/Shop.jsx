@@ -2,6 +2,8 @@ import { Helmet } from 'react-helmet-async';
 import useMenu from './CustomHooks/useMenu';
 import { useContext } from 'react';
 import { AuthContext } from './Firebase/AuthProvider';
+import swal from 'sweetalert';
+import axios from 'axios';
 
 const Shop = () => {
     const [menu] = useMenu();
@@ -13,13 +15,24 @@ const Shop = () => {
 
     const {user} = useContext(AuthContext)
     
-    function handleCart(){
-        console.log("Cart Clicked")
+    function handleCart(x){
+        const _id = x._id
+        const email = user?.email
+        const name = x.name
+        const image = x.image
+        const description = x.recipe
+        const price = x.price
+        const values = { _id,email,name,image,description,price}
+        console.log(_id,email,name,image,description,price)
         if(user){
-            alert("Added To Cart")
+    axios.post('http://localhost:3000/addtocart', values)
+        .then(res => console.log(res.data))
+        .catch(err => console.log(err))
+
+            swal("Added To Cart!","", "success");
         }
         else{
-            alert("Login First")
+            swal("Login First", "", "info");
         }
     }
 
@@ -51,7 +64,7 @@ const Shop = () => {
                                        </div>
                                         <p>{salad.recipe}</p>
                                         <div className="card-actions">
-                                            <button onClick={handleCart} className="text-white btn btn-primary">Add To Cart</button>
+                                            <button onClick={()=>handleCart(salad)} className="text-white btn btn-primary">Add To Cart</button>
                                         </div>
                                     </div>
                                 </div>
@@ -80,7 +93,7 @@ const Shop = () => {
                                        </div>
                                         <p>{salad.recipe}</p>
                                         <div className="card-actions">
-                                            <button onClick={handleCart} className="text-white btn btn-primary">Add To Cart</button>
+                                            <button onClick={()=>handleCart(pizza)} className="text-white btn btn-primary">Add To Cart</button>
                                         </div>
                                     </div>
                                 </div>
@@ -109,7 +122,7 @@ const Shop = () => {
                                        </div>
                                         <p>{salad.recipe}</p>
                                         <div className="card-actions">
-                                            <button onClick={handleCart} className="text-white btn btn-primary">Add To Cart</button>
+                                            <button onClick={()=>handleCart(soup)} className="text-white btn btn-primary">Add To Cart</button>
                                         </div>
                                     </div>
                                 </div>
@@ -138,7 +151,7 @@ const Shop = () => {
                                        </div>
                                         <p>{salad.recipe}</p>
                                         <div className="card-actions">
-                                            <button onClick={handleCart} className="btn btn-primary text-white">Add To Cart</button>
+                                            <button onClick={()=>handleCart(dessert)} className="btn btn-primary text-white">Add To Cart</button>
                                         </div>
                                     </div>
                                 </div>
@@ -167,7 +180,7 @@ const Shop = () => {
                                        </div>
                                         <p>{salad.recipe}</p>
                                         <div className="card-actions">
-                                            <button onClick={handleCart} className="text-white btn btn-primary">Add To Cart</button>
+                                            <button onClick={()=>handleCart(drinks)} className="text-white btn btn-primary">Add To Cart</button>
                                         </div>
                                     </div>
                                 </div>
