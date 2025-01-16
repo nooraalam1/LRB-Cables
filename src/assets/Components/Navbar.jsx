@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "./Firebase/AuthProvider";
+import { FiShoppingCart } from "react-icons/fi";
 
 const Navbar = () => {
 
 const {user,logoutUser} = useContext(AuthContext)
+console.log(user)
 function handlelogout(){
   logoutUser()
 }
@@ -49,7 +51,7 @@ function handlelogout(){
         
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">Noor's Nourishment</a>
+    <a className="btn btn-ghost md:text-xl">Noor's Nourishment</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -69,8 +71,11 @@ function handlelogout(){
     </div>
     </ul>
   </div>
-  <div className="navbar-end">
-<button>{user && user.email}</button>
+  <div className="lg:flex gap-1 justify-end items-center">
+  <div className="flex justify-center items-center">
+ <button className="btn btn-sm bg-yellow-400"> <FiShoppingCart /><p>+1</p></button>
+  </div>
+<div><p className="text-xs">{user && user.email}</p></div>
 
   </div>
 </div>

@@ -14,6 +14,8 @@ import Contact from './assets/Components/Contact';
 import Login from './assets/Components/Login';
 import Registration from './assets/Components/Registration';
 import AuthProvider from './assets/Components/Firebase/AuthProvider';
+import Secrat from './assets/Components/Secrat';
+import PrivateRoute from './assets/Components/PrivateRoute';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,6 +44,10 @@ const router = createBrowserRouter([
       {
         path:'/registration',
         element:<Registration></Registration>
+      },
+      {
+        path:'/secrat',
+        element:<PrivateRoute><Secrat></Secrat></PrivateRoute>
       },
      
     ]
