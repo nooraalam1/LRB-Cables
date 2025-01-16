@@ -6,7 +6,7 @@ import { FiShoppingCart } from "react-icons/fi";
 const Navbar = () => {
 
 const {user,logoutUser} = useContext(AuthContext)
-console.log(user)
+
 function handlelogout(){
   logoutUser()
 }
