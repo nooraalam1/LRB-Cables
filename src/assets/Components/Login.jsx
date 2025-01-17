@@ -10,19 +10,18 @@ const Login = () => {
         const email = e.target.email.value
         const password = e.target.password.value
         const captcha = e.target.captcha.value;
-        if (validateCaptcha(captcha)==true) {
-            alert('Captcha Match');
+        if (validateCaptcha(captcha)==false) {
+            alert('Captcha Did not Match');
+            return;
         }
    
-        else {
-            alert('Captcha Does Not Match');
-            return ;
-        }
+       
        
 
         loginUser(email,password)
         .then((userCredential) => {
            alert("Success")
+           location.reload()
           })
           .catch((error) => {
             alert("error")
