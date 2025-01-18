@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { loadCaptchaEnginge, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 import { AuthContext } from './Firebase/AuthProvider';
-import { Link, NavLink } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 const Login = () => {
     const {loginUser} = useContext(AuthContext)
     function handleLogin(e) {
