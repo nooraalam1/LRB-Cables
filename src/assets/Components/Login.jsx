@@ -1,8 +1,8 @@
 import { useContext, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
+import { loadCaptchaEnginge, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 import { AuthContext } from './Firebase/AuthProvider';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 const Login = () => {
     const {loginUser} = useContext(AuthContext)
     function handleLogin(e) {
@@ -21,7 +21,7 @@ const Login = () => {
         loginUser(email,password)
         .then((userCredential) => {
            alert("Success")
-           location.reload()
+           
           })
           .catch((error) => {
             alert("error")
@@ -31,7 +31,7 @@ const Login = () => {
     }
 
     useEffect(() => {
-        loadCaptchaEnginge(8);
+        loadCaptchaEnginge(2);
     }, [])
     return (
         <div>

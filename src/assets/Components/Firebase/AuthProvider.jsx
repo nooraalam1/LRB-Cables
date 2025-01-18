@@ -13,9 +13,6 @@ const [loading,setLoading] = useState(true)
       const unsubscribe = onAuthStateChanged(auth,user=>{
         setUser(user)
         setLoading(false)
-        if(user){
-          console.log(user.email)
-        }
       })
 
       return ()=>{

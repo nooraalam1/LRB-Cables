@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import {  NavLink } from "react-router-dom";
+import {  Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./Firebase/AuthProvider";
 import { FiShoppingCart } from "react-icons/fi";
 import axios from "axios";
@@ -45,6 +45,9 @@ useEffect(() => {
               <li><NavLink to='/'>Home</NavLink> </li>
               <li><NavLink to='/menu'>Menu</NavLink> </li>
               <li><NavLink to='/shop'>Shop</NavLink> </li>
+              {
+              user && <li><NavLink to='/dashboard'>Dashboard</NavLink> </li>
+            }
               <li><NavLink to='/contact'>Contact</NavLink> </li>
               <div>
                 {
@@ -68,6 +71,9 @@ useEffect(() => {
             <li><NavLink to='/'>Home</NavLink> </li>
             <li><NavLink to='/menu'>Menu</NavLink> </li>
             <li><NavLink to='/shop'>Shop</NavLink> </li>
+            {
+              user && <li><NavLink to='/dashboard'>Dashboard</NavLink> </li>
+            }
             <li><NavLink to='/contact'>Contact</NavLink> </li>
             <div>
               {
@@ -81,10 +87,10 @@ useEffect(() => {
             </div>
           </ul>
         </div>
-        <div className="lg:flex gap-1 justify-end items-center">
-          <div className="flex justify-center items-center">
-            <button 
-             className="btn btn-sm bg-yellow-400"> <FiShoppingCart /><p>{user?.email && data.length}</p></button>
+        <div className="flex gap-1 justify-end items-center">
+          <div className="">
+            
+           <Link to='/dashboard' className="flex justify-center items-center btn btn-sm bg-yellow-200"><FiShoppingCart /><p>{user?.email && data.length}</p></Link>
           </div>
           <div><p className="text-xs">{user && user.email}</p></div>
 
