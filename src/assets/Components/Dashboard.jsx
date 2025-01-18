@@ -18,6 +18,8 @@ const Dashboard = () => {
     
 
     function handleDelete(x){
+        if(confirm("Data Will Be Deleted")==true)
+        {
     
        const id = x._id;       
         axios.delete(`http://localhost:3000/cartItems?email=${user?.email}&&id=${id}`) 
@@ -25,7 +27,7 @@ const Dashboard = () => {
         .catch(err => console.log(err));    
          
         location.reload()
-    }
+    }}
 
     return (
         <div>

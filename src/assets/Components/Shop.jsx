@@ -4,7 +4,6 @@ import { useContext } from 'react';
 import { AuthContext } from './Firebase/AuthProvider';
 import swal from 'sweetalert';
 import axios from 'axios';
-import { Navigate, useLocation } from 'react-router-dom';
 
 const Shop = () => {
     const [menu] = useMenu();
@@ -17,6 +16,7 @@ const Shop = () => {
     const { user } = useContext(AuthContext)
 
     function handleCart(x) {
+
         const _id = x._id
         const email = user?.email
         const name = x.name
@@ -29,15 +29,15 @@ const Shop = () => {
                 .then(res => console.log(res.data))
                 .catch(err => console.log(err))
 
-            swal("Added To Cart!", "", "success");
-            location.reload()
-            
+            swal("Added To Cart!", "", "success");           
             
         }
         else {
             swal("Login First", "", "info");
         }
+
     }
+
 
     return (
         <div>
