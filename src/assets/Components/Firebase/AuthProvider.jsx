@@ -27,6 +27,7 @@ const [loading,setLoading] = useState(true)
         return createUserWithEmailAndPassword (auth,email,password)
     }
 
+
     //Login user
     const loginUser=(email,password)=>{
       setLoading(true)
@@ -44,7 +45,8 @@ const [loading,setLoading] = useState(true)
       loading,
         createUser,
         loginUser,
-        logoutUser
+        logoutUser,
+        
     }
     return (
       <AuthContext.Provider value={info}>

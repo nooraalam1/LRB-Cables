@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { AuthContext } from './Firebase/AuthProvider';
 import swal from 'sweetalert';
 import axios from 'axios';
+import { Navigate, useLocation } from 'react-router-dom';
 
 const Shop = () => {
     const [menu] = useMenu();
@@ -29,6 +30,8 @@ const Shop = () => {
                 .catch(err => console.log(err))
 
             swal("Added To Cart!", "", "success");
+            location.reload()
+            
             
         }
         else {

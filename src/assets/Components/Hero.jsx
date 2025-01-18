@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -14,7 +15,7 @@ const Hero = () => {
             <h1 className="mb-4 text-xl font-semibold">--Check It Out--</h1>
             <h1 className="mb-4 text-2xl ">From Our Menu</h1>
             <img src="../../../public/Img/banner.jpg" alt=""  />
-            <button className="btn btn-secondary">Order Now</button>
+            <NavLink to='/shop'><button className="btn btn-secondary">Order Now</button></NavLink>
           </div>
         </div>
       </div>

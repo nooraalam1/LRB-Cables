@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import {  Link, NavLink } from "react-router-dom";
+import {  Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "./Firebase/AuthProvider";
 import { FiShoppingCart } from "react-icons/fi";
 import axios from "axios";
@@ -7,6 +7,8 @@ import axios from "axios";
 
 
 const Navbar = () => {
+
+const navigator = useNavigate()
 const { user, logoutUser } = useContext(AuthContext)
 const [data, setData] = useState([])
 useEffect(() => {
@@ -19,6 +21,8 @@ useEffect(() => {
 
   function handlelogout() {
     logoutUser()
+    navigator('/')
+
   }
   return (
     <nav>
