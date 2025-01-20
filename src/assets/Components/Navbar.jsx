@@ -8,7 +8,7 @@ import axios from "axios";
 
 const Navbar = () => {
 
-const navigator = useNavigate()
+const navigate = useNavigate()
 const { user, logoutUser } = useContext(AuthContext)
 const [data, setData] = useState([])
 useEffect(() => {
@@ -21,7 +21,7 @@ useEffect(() => {
 
   function handlelogout() {
     logoutUser()
-    navigator('/')
+    navigate('/')
 
   }
   return (

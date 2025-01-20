@@ -5,6 +5,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import app from './Firebase/firebase.config';
+import axios from 'axios';
 const auth = getAuth(app)
 
 const provider = new GoogleAuthProvider();
@@ -14,12 +15,23 @@ const Registration = () => {
 const { createUser } = useContext(AuthContext);
 const navigate = useNavigate()
 
+//Info Adding to Database
+function AddToDB(name,email){
+    const values = {name,email}
+    axios.post('http://localhost:3000/userInfo', values)
+    .then(res => console.log(res.data))
+    .catch(err => console.log(err))
+
+}
+
+
     //google registration
     function handleGoogleRegi() {
         signInWithPopup(auth, provider)
-            .then((result) => {
-                
-                swal("Success","","info")
+        .then((result) => {
+                //console.log(result.user.displayName,result.user.email)
+                AddToDB(result.user.displayName,result.user.email)
+                swal(result.user.displayName,"","info")
                 navigate('/')
             })
             .catch((error) => {
@@ -41,7 +53,8 @@ const navigate = useNavigate()
 
             .then((result) => {
                 if (result) {
-                    swal("Success","","info")
+                    AddToDB(name,email)
+                    swal(result.user.displayName,"","info")
                     navigate('/')
                     e.target.reset()
                 }

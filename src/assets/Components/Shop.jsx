@@ -1,11 +1,15 @@
 import { Helmet } from 'react-helmet-async';
 import useMenu from './CustomHooks/useMenu';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { AuthContext } from './Firebase/AuthProvider';
 import swal from 'sweetalert';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Shop = () => {
+
+    const navigate =useNavigate()
+
     const [menu] = useMenu();
     const drinks = menu.filter(item => item.category === 'drinks')
     const dessert = menu.filter(item => item.category === 'dessert')
@@ -29,14 +33,19 @@ const Shop = () => {
                 .then(res => console.log(res.data))
                 .catch(err => console.log(err))
 
-            swal("Added To Cart!", "", "success");           
+            swal("Added To Cart!", "", "success");         
+            navigate('/dashboard')  
             
         }
         else {
             swal("Login First", "", "info");
         }
 
+
+
     }
+
+
 
 
     return (

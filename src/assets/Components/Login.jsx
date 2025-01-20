@@ -18,8 +18,7 @@ const Login = () => {
 function handleGoogleLogin(){
     signInWithPopup(auth, provider)
     .then((result) => {
-        console.log(result)
-        swal("Success","","info")
+        swal(result?.user?.displayName,"","success")
         navigate('/')
     })
     .catch((error) => {
@@ -47,7 +46,7 @@ function handleGoogleLogin(){
         loginUser(email,password)
         .then((result) => {
             console.log(result)
-            swal("Success","","info")
+            swal(result?.user?.displayName,"","success")
             navigate('/')
         })
         .catch((error) => {
