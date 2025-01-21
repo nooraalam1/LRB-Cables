@@ -16,6 +16,8 @@ import Registration from './assets/Components/Registration';
 import AuthProvider from './assets/Components/Firebase/AuthProvider';
 import PrivateRoute from './assets/Components/PrivateRoute';
 import Dashboard from './assets/Components/Dashboard';
+import Additems from './assets/Components/Dashboard/Additems';
+import AllUsers from './assets/Components/Dashboard/AllUsers';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -48,6 +50,14 @@ const router = createBrowserRouter([
       {
         path:'/dashboard',
         element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
+      },
+      {
+        path:'/dashboard/additems',
+        element:<PrivateRoute><Additems></Additems></PrivateRoute>
+      },
+      {
+        path:'/dashboard/allusers',
+        element:<PrivateRoute><AllUsers></AllUsers></PrivateRoute>
       }
 
      

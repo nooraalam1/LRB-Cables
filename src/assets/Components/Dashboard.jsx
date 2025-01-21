@@ -2,6 +2,7 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "./Firebase/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
     const { user } = useContext(AuthContext)
@@ -81,8 +82,9 @@ const Dashboard = () => {
                     <ul className="menu bg-base-200 text-base-content md:min-h-full w-80 p-4">
                         {/* Sidebar content here */}
                         <li className="text-center">{user.email}</li> <hr />
-                        <li><a>Sidebar Item 1</a></li>
-                        <li><a>Sidebar Item 2</a></li>
+                        <li><Link to='/dashboard/additems'>Add Items</Link></li>
+                        <li><Link to='/dashboard/allusers'>All Users</Link></li>
+                      
                     </ul>
                 </div>
             </div>
