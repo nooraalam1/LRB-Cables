@@ -11,5 +11,4 @@
     4) Daisy UI
     5) Multiple npm packages
     6) Firebase
-    7) React Hook Form
     
