@@ -5,11 +5,10 @@
     4) mySQL
 
 ## Technology Used
-    1) Custom Hooks
-    2) React Router
+    1) React Router
+    2) Custom Hooks
     3) Taildwind CSS
     4) Daisy UI
     5) Multiple npm packages
     6) Firebase
-    7) React Hook Form
-    
+    7) JWT
