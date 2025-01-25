@@ -5,7 +5,7 @@
     4) mySQL
 
 ## Technology Used
-    1) eact Router
+    1) React Router
     2) Custom Hooks
     3) Taildwind CSS
     4) Daisy UI
