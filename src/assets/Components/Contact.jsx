@@ -5,6 +5,8 @@ const Contact = () => {
         <div>
            <Helmet>
                    <title>Noor | Contact</title>
+
+                   making
                  </Helmet>
         </div>
     );
