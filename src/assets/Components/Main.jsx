@@ -1,18 +1,16 @@
-import { Outlet, useLocation } from 'react-router-dom';
-import Footer from './Footer';
+import { Outlet } from 'react-router-dom';
+
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const Main = () => {
-    const location = useLocation();
-    const x = location.pathname.includes('login')
-    const y = location.pathname.includes('registration')
-    const z = location.pathname.includes('dashboard')
+
 
     return (
         <div>
              <Navbar />
             <Outlet />
-           {x || y  || z|| <Footer />}
+            <Footer></Footer>
            
             
         </div>
