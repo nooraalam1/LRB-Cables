@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Logo and Company Name */}
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center gap-3">
-            <img src="../public/Capture.PNG" alt="Company Logo" className="h-12 w-12 object-contain" /> {/* Replace logo.png with your actual logo */}
+            <img src="Capture.PNG" alt="Company Logo" className="h-12 w-12 object-contain" /> {/* Replace logo.png with your actual logo */}
             <h2 className="text-2xl font-bold">LRB Cables Industries Ltd.</h2>
           </div>
 

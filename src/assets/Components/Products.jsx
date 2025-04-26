@@ -3,42 +3,42 @@ import React from 'react';
 const products = [
   {
     name: 'Domestic Cables',
-    image: '../public/domestic.jpg',
+    image: 'domestic.jpg',
     description: 'Reliable wiring solutions for homes and buildings.',
   },
   {
     name: 'Power Cables',
-    image: '../public/Power Cables.jpeg',
+    image: 'Power Cables.jpeg',
     description: 'High-performance cables for power distribution.',
   },
   {
     name: 'Control Cables',
-    image: '../public/Control.jpeg',
+    image: 'Control.jpeg',
     description: 'Designed for automation, control, and signal transmission.',
   },
   {
     name: 'Submersible Cables',
-    image: '../public/Sub.jpeg',
+    image: 'Sub.jpeg',
     description: 'Waterproof cables ideal for deep installations.',
   },
   {
     name: 'Communication Cables',
-    image: '../public/commu.jfif',
+    image: 'commu.jpg',
     description: 'Reliable cables for telecommunication networks.',
   },
   {
     name: 'DC Cables',
-    image: '../public/dc.jfif',
+    image: 'dc.jpg',
     description: 'High-efficiency cables for DC systems and solar panels.',
   },
   {
     name: 'Special Customised Cables',
-    image: '../public/Special.jpeg',
+    image: 'Special.jpeg',
     description: 'Tailor-made cables for specialized applications.',
   },
   {
     name: 'Overhead Related Cables',
-    image: '../public/Overhead.jpeg',
+    image: 'Overhead.jpeg',
     description: 'Durable cables for overhead transmission lines.',
   },
 ];

@@ -14,42 +14,42 @@ const Home = () => {
   const products = [
     {
       name: 'Domestic Cables',
-      images: ['../public/domestic.jpg'],
+      images: ['domestic.jpg'],
       description: 'High-quality domestic cables ideal for household wiring needs.',
     },
     {
       name: 'Power Cables',
-      images: ['../public/Power Cables.jpeg'],
+      images: ['Power Cables.jpeg'],
       description: 'Durable power cables for industrial and commercial applications.',
     },
     {
       name: 'Control Cables',
-      images: ['../public/Control.jpeg'],
+      images: ['Control.jpeg'],
       description: 'Reliable control cables for automation and instrumentation.',
     },
     {
       name: 'Submersible Cables',
-      images: ['../public/Sub.jpeg'],
+      images: ['Sub.jpeg'],
       description: 'Specialized submersible cables for underwater applications.',
     },
     {
       name: 'Communication Cables',
-      images: ['../public/commu.jfif'],
+      images: ['commu.jpg'],
       description: 'Efficient communication cables ensuring seamless data transfer.',
     },
     {
       name: 'DC Cables',
-      images: ['../public/dc.jfif'],
+      images: ['dc.jpg'],
       description: 'Premium DC cables optimized for solar and battery systems.',
     },
     {
       name: 'Special Customised Cables',
-      images: ['/../public/Special.jpeg'],
+      images: ['Special.jpeg'],
       description: 'Tailored cables designed for specific industrial requirements.',
     },
     {
       name: 'Overhead Related Cables',
-      images: ['../public/Overhead.jpeg'],
+      images: ['Overhead.jpeg'],
       description: 'Overhead line cables offering durability and high performance.',
     },
   ];
@@ -59,13 +59,13 @@ const Home = () => {
       {/* Carousel */}
       <div className="carousel w-full">
         <div className={`carousel-item w-full ${activeIndex === 0 ? 'block' : 'hidden'}`}>
-          <img src="/Capture2.PNG" alt="Banner 1" className="w-full" />
+          <img src="Capture2.PNG" alt="Banner 1" className="w-full" />
         </div>
         <div className={`carousel-item w-full ${activeIndex === 1 ? 'block' : 'hidden'}`}>
-          <img src="/Capture.PNG" alt="Banner 2" className="w-full" />
+          <img src="Capture.PNG" alt="Banner 2" className="w-full" />
         </div>
         <div className={`carousel-item w-full ${activeIndex === 2 ? 'block' : 'hidden'}`}>
-          <img src="/Capture2.PNG" alt="Banner 3" className="w-full" />
+          <img src="Capture2.PNG" alt="Banner 3" className="w-full" />
         </div>
       </div>
 
@@ -107,11 +107,11 @@ const Home = () => {
         <h2 className="text-3xl font-bold text-center text-blue-800 mb-10">Our Certificates</h2>
         <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-4">
           <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
-            <img src="/BSTI.jfif" alt="BSTI Certificate" className="w-40 h-40 object-contain mb-4" />
+            <img src="BSTI.jpg" alt="BSTI Certificate" className="w-40 h-40 object-contain mb-4" />
             <h3 className="text-lg font-semibold">BSTI Certified</h3>
           </div>
           <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
-            <img src="/Flame.png" alt="Flame Retard Certificate" className="w-40 h-40 object-contain mb-4" />
+            <img src="Flame.png" alt="Flame Retard Certificate" className="w-40 h-40 object-contain mb-4" />
             <h3 className="text-lg font-semibold">Flame Retardant Tested</h3>
           </div>
         </div>

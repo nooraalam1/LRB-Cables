@@ -23,7 +23,7 @@ const Contact = () => {
         {/* MD */}
         <div className="bg-blue-100 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col items-center">
           <img 
-            src="../public/MD.jpeg" 
+            src="MD.jpeg" 
             alt="Managing Director" 
             className="w-32 h-32 rounded-full mb-4 object-cover"
           />

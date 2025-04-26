@@ -1,14 +1,14 @@
 const aboutContent = [
     {
-      image: '/public/1.jpeg',
+      image: '1.jpeg',
       text: 'We are a leading manufacturer of high-quality cables, ensuring safety and performance in every product.',
     },
     {
-      image: '/public/2.jpeg',
+      image: '2.jpeg',
       text: 'Our commitment to innovation drives us to create products that meet the needs of modern industries.',
     },
     {
-      image: '/public/3.jpeg',
+      image: '3.jpeg',
       text: 'With a strong focus on customer satisfaction, we strive to provide solutions that add value to our clients.',
     },
   ];
