@@ -11,48 +11,54 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const products = [
-    {
-      name: 'Domestic Cables',
-      images: ['domestic.jpg'],
-      description: 'High-quality domestic cables ideal for household wiring needs.',
-    },
-    {
-      name: 'Power Cables',
-      images: ['Power Cables.jpeg'],
-      description: 'Durable power cables for industrial and commercial applications.',
-    },
-    {
-      name: 'Control Cables',
-      images: ['Control.jpeg'],
-      description: 'Reliable control cables for automation and instrumentation.',
-    },
-    {
-      name: 'Submersible Cables',
-      images: ['Sub.jpeg'],
-      description: 'Specialized submersible cables for underwater applications.',
-    },
-    {
-      name: 'Communication Cables',
-      images: ['commu.jpg'],
-      description: 'Efficient communication cables ensuring seamless data transfer.',
-    },
-    {
-      name: 'DC Cables',
-      images: ['dc.jpg'],
-      description: 'Premium DC cables optimized for solar and battery systems.',
-    },
-    {
-      name: 'Special Customised Cables',
-      images: ['Special.jpeg'],
-      description: 'Tailored cables designed for specific industrial requirements.',
-    },
-    {
-      name: 'Overhead Related Cables',
-      images: ['Overhead.jpeg'],
-      description: 'Overhead line cables offering durability and high performance.',
-    },
-  ];
+  const categorizedProducts = {
+    "Domestic Use": [
+      {
+        name: 'Domestic Cables',
+        image: 'dmstic.jpeg',
+        description: 'High-quality domestic cables ideal for household wiring needs.',
+      },
+    ],
+    "Industrial Use": [
+      {
+        name: 'Power Cables',
+        image: 'pow c.jpeg',
+        description: 'Durable power cables for industrial and commercial applications.',
+      },
+      {
+        name: 'Control Cables',
+        image: 'Control.jpeg',
+        description: 'Reliable control cables for automation and instrumentation.',
+      },
+      {
+        name: 'Overhead Related Cables',
+        image: 'Overhead.jpeg',
+        description: 'Overhead line cables offering durability and high performance.',
+      },
+    ],
+    "Special Purpose": [
+      {
+        name: 'Submersible Cables',
+        image: 'Sub.jpeg',
+        description: 'Specialized submersible cables for underwater applications.',
+      },
+      {
+        name: 'Communication Cables',
+        image: 'commu.jpg',
+        description: 'Efficient communication cables ensuring seamless data transfer.',
+      },
+      {
+        name: 'DC Cables',
+        image: 'dc c.jpeg',
+        description: 'Premium DC cables optimized for solar and battery systems.',
+      },
+      {
+        name: 'Special Customised Cables',
+        image: 'custom.jpeg',
+        description: 'Tailored cables designed for specific industrial requirements.',
+      },
+    ],
+  };
 
   return (
     <div className="container mx-auto mt-10">
@@ -77,29 +83,32 @@ const Home = () => {
 
       {/* Featured Products Section */}
       <section className="mt-16">
-        <h2 className="text-3xl font-bold text-center text-blue-800 mb-10">Our Products</h2>
-        <div className="space-y-16">
-          {products.map((product, index) => (
-            <div key={index} className="bg-white shadow-md rounded-lg p-6">
-              <div className="flex items-center">
-                {/* Product Image on the left */}
-                <div className="w-1/2">
-                  <img 
-                    src={product.images[0]} 
-                    alt={product.name} 
-                    className="w-full h-48 object-cover rounded-lg shadow-md" 
-                  />
-                </div>
+        <h2 className="text-4xl font-bold text-center text-blue-800 mb-12">Our Products</h2>
 
-                {/* Product Description on the right */}
-                <div className="w-1/2 pl-8">
-                  <h3 className="text-2xl font-semibold text-blue-700 mb-4">{product.name}</h3>
-                  <p className="mb-6 text-gray-600">{product.description}</p>
+        {Object.keys(categorizedProducts).map((category, idx) => (
+          <div key={idx} className="mb-16">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-8">{category}</h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+              {categorizedProducts[category].map((product, pIdx) => (
+                <div 
+                  key={pIdx} 
+                  className="bg-white shadow-md rounded-lg overflow-hidden transition hover:shadow-lg hover:scale-105"
+                >
+                  <img 
+                    src={product.image} 
+                    alt={product.name} 
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-6">
+                    <h4 className="text-xl font-bold text-blue-700 mb-2">{product.name}</h4>
+                    <p className="text-gray-600 text-sm">{product.description}</p>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </section>
 
       {/* Certificates Section */}
