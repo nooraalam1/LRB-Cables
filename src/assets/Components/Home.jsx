@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Swiper from '../Components/Swiper';
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -125,6 +126,10 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+     <div className=''>
+      <div> <Swiper></Swiper></div>
+     </div>
     </div>
   );
 };
