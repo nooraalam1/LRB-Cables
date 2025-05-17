@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Swiper from '../Components/Swiper';
+import ProdImages from './ProdImages';
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -112,8 +113,14 @@ const Home = () => {
         ))}
       </section>
 
-      {/* Certificates Section */}
-      <section className="mt-20 mb-16">
+     
+
+
+     <div className=''>
+      <div> <Swiper></Swiper></div>
+     </div>
+ {/* Certificates Section */}
+           <section className="mt-20 mb-16">
         <h2 className="text-3xl font-bold text-center text-blue-800 mb-10">Our Certificates</h2>
         <div className="flex flex-col md:flex-row justify-center items-center gap-10 px-4">
           <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
@@ -126,10 +133,10 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-     <div className=''>
-      <div> <Swiper></Swiper></div>
-     </div>
+<div>
+  <ProdImages></ProdImages>
+</div>
+      
     </div>
   );
 };
