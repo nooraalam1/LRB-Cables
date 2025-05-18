@@ -1,92 +1,98 @@
 const Swiper = () => (
-  <div className="space-y-4">
+  <div className="space-y-16">
     
-<section className="bg-gradient-to-br from-blue-50 via-white to-blue-100 py-20 px-6 md:px-10">
-  <h2 className="text-4xl font-extrabold text-center text-blue-900 mb-14">
-    Chairman delivering a message
-  </h2>
+    {/* Chairman Section */}
+    <section className="bg-gradient-to-br from-blue-50 via-white to-blue-100 py-16 px-4 sm:px-6 md:px-10">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-blue-900 mb-10 sm:mb-14">
+        Chairman delivering a message
+      </h2>
 
-  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 items-start gap-10">
-    {/* Chairman Image */}
-    <div className="flex justify-center">
-      <img
-        src="chairman.jpeg"
-        alt="Chairman"
-        className="w-64 h-80 object-cover rounded-2xl shadow-2xl border-4 border-blue-300 hover:scale-105 transition duration-300"
-      />
-    </div>
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 items-start gap-8 md:gap-10">
+        <div className="flex justify-center">
+          <img
+            src="chairman.jpeg"
+            alt="Chairman"
+            className="w-52 sm:w-60 md:w-64 h-72 sm:h-80 object-cover rounded-2xl shadow-2xl border-4 border-blue-300 hover:scale-105 transition duration-300"
+          />
+        </div>
 
-    {/* Message Text */}
-    <div className="md:col-span-2">
-      <div className="bg-white p-8 rounded-3xl shadow-xl border-l-8 border-blue-500">
-        <p className="text-lg text-gray-800 leading-relaxed text-justify">
-          With 25 years of experience in the cable industry, I have launched
-          LRB Cables to deliver top-quality, safe, and reliable cables for all
-          of Bangladesh. Our products use pure copper, FR safety features, and
-          virgin PVC to ensure strong performance and protect lives,
-          businesses, and industries from electrical hazards. At LRB, we aim
-          to build lasting bonds with users, suppliers, and businessmen
-          through Love, Respect & Brotherhood — lighting up both cities and
-          villages with trust and quality.
-          <br />
-          <h1 className="text-2xl font-semibold text-blue-800 mt-4">
-            Md. Liton Ahmed <br /> 
-            <span className="text-blue-600">Chairman, LRB Cables Industries Ltd.</span>
-          </h1>
-        </p>
+        <div className="md:col-span-2">
+          <div className="bg-white p-5 sm:p-6 md:p-8 rounded-3xl shadow-xl border-l-8 border-blue-500">
+            <p className="text-base sm:text-lg text-gray-800 leading-relaxed text-justify">
+              As someone who has been deeply involved in the cable industry for many years, I’ve witnessed both the challenges and the tremendous potential within this vital sector. Throughout my career, I have gained valuable insights into what truly matters — not just high performance, but also safety, consistency, and trust.
+
+Driven by this understanding and fueled by a passion to contribute to national development, I founded LRB Cables Industries Ltd. with a clear mission: to provide Bangladesh with cables that are uncompromising in quality, engineered for safety, and designed to stand the test of time. Our cables are crafted with pure copper, fire-retardant (FR) technology, and virgin PVC, ensuring superior conductivity, durability, and resistance to electrical hazards.
+
+But beyond the products, LRB stands for something greater. The name itself — Love, Respect & Brotherhood — reflects our deep-rooted belief in building relationships, not just running a business. We aim to form strong bonds with our customers, partners, and employees through honesty, excellence, and shared growth.
+
+Whether it’s lighting up a rural home, powering a growing industry, or supporting the infrastructure of a bustling city, LRB Cables is here to empower lives. We envision a future where Bangladesh is not only electrified but elevated — with safety, quality, and human connection at its core.
+
+              <br />
+              <h1 className="text-base sm:text-lg md:text-xl font-semibold text-blue-800 mt-4">
+                Md. Liton Ahmed
+              </h1>
+              <h1 className="text-base sm:text-lg md:text-xl font-semibold text-blue-800 mt-2">
+                Chairman,
+              </h1>
+              <h1 className="text-base sm:text-lg md:text-xl font-semibold text-blue-800 mt-2">
+                LRB Cables Industries Ltd.
+              </h1>
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section className="bg-gradient-to-br from-yellow-50 via-white to-yellow-100 py-20 px-6 md:px-10">
-  <h2 className="text-4xl font-extrabold text-center text-yellow-900 mb-14">
-    Managing Director delivering a message
-  </h2>
+    {/* Managing Director Section */}
+    <section className="bg-gradient-to-br from-yellow-50 via-white to-yellow-100 py-16 px-4 sm:px-6 md:px-10">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-yellow-900 mb-10 sm:mb-14">
+        Managing Director delivering a message
+      </h2>
 
-  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 items-start gap-10">
-    {/* MD Image */}
-    <div className="flex justify-center">
-      <img
-        src="MD.jpeg"
-        alt="Chairman"
-        className="w-64 h-80 object-cover rounded-2xl shadow-2xl border-4 border-yellow-300 hover:scale-105 transition duration-300"
-      />
-    </div>
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 items-start gap-8 md:gap-10">
+        <div className="flex justify-center">
+          <img
+            src="MD.jpeg"
+            alt="Chairman"
+            className="w-52 sm:w-60 md:w-64 h-72 sm:h-80 object-cover rounded-2xl shadow-2xl border-4 border-yellow-300 hover:scale-105 transition duration-300"
+          />
+        </div>
 
-    {/* Message Text */}
-    <div className="md:col-span-2">
-      <div className="bg-white p-8 rounded-3xl shadow-xl border-l-8 border-yellow-500">
-        <p className="text-lg text-gray-800 leading-relaxed text-justify">
-          With over 15 years of hands-on experience in the cable industry, I
-          am proud to lead LRB Cables Industries Ltd. on a new mission — to
-          deliver world-class cables under the brand LRB Cables. We understand
-          the true needs of users, suppliers, and businessmen across
-          Bangladesh.That’s why we are committed to providing high-quality
-          cables that feature: <br /><br />
-          1) Original copper with high purity and conductivity <br />
-          2) Flame Retardant (FR) and virgin PVC components <br />
-          3) Reliable performance and long-lasting durability <br /><br />
-          At LRB, we don’t just manufacture cables — we build connections that power life, business,
-          and industry safely and reliably. Our products are designed to
-          prevent electrical accidents and ensure your safety, your family’s
-          security, and your business continuity. We envision a future where
-          Love, Respect & Brotherhood connect not just cables, but people —
-          bridging the gap between city and village, and lighting up every
-          corner of Bangladesh. Join us in powering progress, building trust,
-          and creating a brighter, safer tomorrow.
-          <br />
-          <h1 className="text-2xl font-semibold text-yellow-800 mt-4">
-            H.M. Rashidul Hoque <br /> 
-            <span className="text-yellow-600">Managing Director, LRB Cables Industries Ltd.</span>
-          </h1>
-        </p>
+        <div className="md:col-span-2">
+          <div className="bg-white p-5 sm:p-6 md:p-8 rounded-3xl shadow-xl border-l-8 border-yellow-500">
+            <p className="text-base sm:text-lg text-gray-800 leading-relaxed text-justify">
+              With over 15 years of hands-on experience in the cable industry, I
+              am proud to lead LRB Cables Industries Ltd. on a new mission — to
+              deliver world-class cables under the brand LRB Cables. We understand
+              the true needs of users, suppliers, and businessmen across
+              Bangladesh.That’s why we are committed to providing high-quality
+              cables that feature: <br /><br />
+              1) Original copper with high purity and conductivity <br />
+              2) Flame Retardant (FR) and virgin PVC components <br />
+              3) Reliable performance and long-lasting durability <br /><br />
+              At LRB, we don’t just manufacture cables — we build connections that power life, business,
+              and industry safely and reliably. Our products are designed to
+              prevent electrical accidents and ensure your safety, your family’s
+              security, and your business continuity. We envision a future where
+              Love, Respect & Brotherhood connect not just cables, but people —
+              bridging the gap between city and village, and lighting up every
+              corner of Bangladesh. Join us in powering progress, building trust,
+              and creating a brighter, safer tomorrow.
+              <br />
+               <h1 className="text-base sm:text-lg md:text-xl font-semibold text-blue-800 mt-4">
+               H.M. Rashidul Hoque
+              </h1>
+              <h1 className="text-base sm:text-lg md:text-xl font-semibold text-blue-800 mt-2">
+                Managing Director,
+              </h1>
+              <h1 className="text-base sm:text-lg md:text-xl font-semibold text-blue-800 mt-2">
+               LRB Cables Industries Ltd.
+              </h1>
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
+    </section>
   </div>
 );
 
